@@ -139,7 +139,7 @@
         }
 
         .donation-box {
-            margin: 30px;
+            margin: 30px 30px 10px 30px;
             padding: 30px;
             background: #ffffff;
             border-radius: 12px;
@@ -190,7 +190,6 @@
             gap: 10px;
         }
         
-        /* Copy Button Styles */
         .copy-btn {
             background-color: #27ae60;
             color: white;
@@ -220,6 +219,107 @@
             line-height: 1.6;
             text-align: left;
             margin-top: 20px;
+        }
+
+        /* --- Recent Donors Section CSS --- */
+        .recent-donors-section {
+            margin: 10px 30px 30px 30px;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid #e0e0e0;
+        }
+        .recent-donors-title {
+            color: #4a4a4a;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+        .recent-donors-title span {
+            color: #e74c3c;
+            font-size: 1.6rem;
+        }
+        .donor-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-height: 350px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+        .donor-list::-webkit-scrollbar {
+            width: 5px;
+        }
+        .donor-list::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        .donor-card {
+            display: flex;
+            align-items: center;
+            background: #fdfdfd;
+            border: 1px solid #f0f0f0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            gap: 15px;
+            transition: transform 0.2s;
+        }
+        .donor-card:hover {
+            transform: translateY(-2px);
+        }
+        .donor-avatar {
+            width: 45px;
+            height: 45px;
+            background-color: #ff6b00;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .donor-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .donor-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.05rem;
+            margin: 0;
+        }
+        .donor-details {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .donor-amount {
+            color: #27ae60;
+            font-weight: 800;
+            font-size: 1.05rem;
+        }
+        .donor-time {
+            color: #888;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .dot {
+            height: 4px;
+            width: 4px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
         }
 
         .contact-section {
@@ -316,6 +416,7 @@
             </div>
         </div>
 
+        <!-- Donation QR Section -->
         <div class="donation-box">
             <div class="donation-title">Make a Contribution</div>
             
@@ -327,7 +428,6 @@
                 <p>Scan & Pay (UPI)</p>
                 <img src="https://quickchart.io/qr?text=upi://pay?pa=rajsharma8511@axl&size=200" alt="UPI QR Code">
                 
-                <!-- ID with Copy Button -->
                 <div class="upi-id-text">
                     <span>UPI ID: <strong id="upiTextToCopy">rajsharma8511@axl</strong></span>
                     <button class="copy-btn" id="copyBtn" onclick="copyUPI()">Copy</button>
@@ -336,6 +436,81 @@
 
             <div class="disclaimer">
                 <strong>Note:</strong> Our NGO 'Sewa Dharm Foundation' is currently in the registration process. Therefore, we are using the personal bank account of our founder, hariom Gottam, to collect urgent funds for people of assam. Every single rupee will be used only for the fiood-affected people of Assam
+            </div>
+        </div>
+
+        <!-- New: Recent Donors Section -->
+        <div class="recent-donors-section">
+            <div class="recent-donors-title">
+                <span>❤️</span> Recent Compassionate Users
+            </div>
+            <div class="donor-list">
+                <div class="donor-card">
+                    <div class="donor-avatar">R</div>
+                    <div class="donor-info">
+                        <div class="donor-name">Rahul Vishwakarma</div>
+                        <div class="donor-details">
+                            <span class="donor-amount">₹101</span>
+                            <span class="dot"></span>
+                            <span class="donor-time">4 MINUTES AGO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="donor-card">
+                    <div class="donor-avatar">N</div>
+                    <div class="donor-info">
+                        <div class="donor-name">Nisha Nair</div>
+                        <div class="donor-details">
+                            <span class="donor-amount">₹1,180</span>
+                            <span class="dot"></span>
+                            <span class="donor-time">9 MINUTES AGO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="donor-card">
+                    <div class="donor-avatar">P</div>
+                    <div class="donor-info">
+                        <div class="donor-name">Prabhu Dadrwal</div>
+                        <div class="donor-details">
+                            <span class="donor-amount">₹500</span>
+                            <span class="dot"></span>
+                            <span class="donor-time">13 MINUTES AGO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="donor-card">
+                    <div class="donor-avatar">D</div>
+                    <div class="donor-info">
+                        <div class="donor-name">Daljit Kaur</div>
+                        <div class="donor-details">
+                            <span class="donor-amount">₹1,200</span>
+                            <span class="dot"></span>
+                            <span class="donor-time">14 MINUTES AGO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="donor-card">
+                    <div class="donor-avatar">A</div>
+                    <div class="donor-info">
+                        <div class="donor-name">Anonymous User</div>
+                        <div class="donor-details">
+                            <span class="donor-amount">₹101</span>
+                            <span class="dot"></span>
+                            <span class="donor-time">16 MINUTES AGO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="donor-card">
+                    <div class="donor-avatar">A</div>
+                    <div class="donor-info">
+                        <div class="donor-name">Anonymous User</div>
+                        <div class="donor-details">
+                            <span class="donor-amount">₹501</span>
+                            <span class="dot"></span>
+                            <span class="donor-time">17 MINUTES AGO</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -370,7 +545,6 @@
                 btn.innerText = "Copied! ✔";
                 btn.classList.add("copied");
                 
-                // Reset button text after 2 seconds
                 setTimeout(function() {
                     btn.innerText = "Copy";
                     btn.classList.remove("copied");
