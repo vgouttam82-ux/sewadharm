@@ -160,6 +160,9 @@
             justify-content: center;
             margin-bottom: 25px;
         }
+        .amount-buttons a {
+            text-decoration: none;
+        }
         .amt-btn {
             padding: 10px 20px;
             border: 2px solid #27ae60;
@@ -308,10 +311,22 @@
             <div class="donation-title">Make a Contribution</div>
 
             <div class="amount-buttons">
-                <button class="amt-btn">₹100</button>
-                <button class="amt-btn">₹500</button>
-                <button class="amt-btn active">₹1000</button>
-                <button class="amt-btn">Other Amount</button>
+                <!-- 100 Rs Button Link -->
+                <a href="upi://pay?pa=rajsharma8511@axl&pn=Sewa%20Dharm&am=100&cu=INR">
+                    <button class="amt-btn">₹100</button>
+                </a>
+                <!-- 500 Rs Button Link -->
+                <a href="upi://pay?pa=rajsharma8511@axl&pn=Sewa%20Dharm&am=500&cu=INR">
+                    <button class="amt-btn">₹500</button>
+                </a>
+                <!-- 1000 Rs Button Link -->
+                <a href="upi://pay?pa=rajsharma8511@axl&pn=Sewa%20Dharm&am=1000&cu=INR">
+                    <button class="amt-btn active">₹1000</button>
+                </a>
+                <!-- Other Amount Button Link -->
+                <a href="upi://pay?pa=rajsharma8511@axl&pn=Sewa%20Dharm&cu=INR">
+                    <button class="amt-btn">Other Amount</button>
+                </a>
             </div>
 
             <div class="qr-container">
@@ -321,7 +336,7 @@
             </div>
 
             <div class="disclaimer">
-                <strong>Note:</strong> Our NGO 'Sewa Dharm Foundation' is currently in the registration process. Therefore, we are using the personal bank account of our founder, Vishal Gautam, to collect urgent funds for people of assam. Every single rupee will be used only for the fiood-affected people of Assam
+                <strong>Note:</strong> Our NGO 'Sewa Dharm Foundation' is currently in the registration process. Therefore, we are using the personal bank account of our founder, hariom Gottam, to collect urgent funds for people of assam. Every single rupee will be used only for the fiood-affected people of Assam
             </div>
         </div>
 
