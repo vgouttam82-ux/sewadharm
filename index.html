@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -183,9 +182,32 @@
             color: #333;
             font-size: 1.1rem;
             background-color: #e8f8f5;
-            padding: 8px 15px;
+            padding: 10px 15px;
             border-radius: 6px;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        /* Copy Button Styles */
+        .copy-btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .copy-btn:hover {
+            background-color: #1e8449;
+        }
+        .copy-btn.copied {
+            background-color: #f1c40f;
+            color: #333;
         }
 
         .disclaimer {
@@ -297,15 +319,19 @@
         <div class="donation-box">
             <div class="donation-title">Make a Contribution</div>
             
-            <!-- Added a clear instruction for donors -->
             <div class="donation-instruction">
-                कृपया नीचे दिए गए QR कोड को स्कैन करके या UPI ID द्वारा अपना योगदान दें।
+                कृपया नीचे दिए गए QR कोड को स्कैन करके या UPI ID कॉपी करके अपना योगदान दें।
             </div>
 
             <div class="qr-container">
                 <p>Scan & Pay (UPI)</p>
                 <img src="https://quickchart.io/qr?text=upi://pay?pa=rajsharma8511@axl&size=200" alt="UPI QR Code">
-                <div class="upi-id-text">UPI ID: <strong>rajsharma8511@axl</strong></div>
+                
+                <!-- ID with Copy Button -->
+                <div class="upi-id-text">
+                    <span>UPI ID: <strong id="upiTextToCopy">rajsharma8511@axl</strong></span>
+                    <button class="copy-btn" id="copyBtn" onclick="copyUPI()">Copy</button>
+                </div>
             </div>
 
             <div class="disclaimer">
@@ -334,6 +360,26 @@
     <footer>
         &copy; 2026 All rights reserved by Seva Dharm foundation
     </footer>
+
+    <!-- JavaScript for Copy Button -->
+    <script>
+        function copyUPI() {
+            var upiText = document.getElementById("upiTextToCopy").innerText;
+            navigator.clipboard.writeText(upiText).then(function() {
+                var btn = document.getElementById("copyBtn");
+                btn.innerText = "Copied! ✔";
+                btn.classList.add("copied");
+                
+                // Reset button text after 2 seconds
+                setTimeout(function() {
+                    btn.innerText = "Copy";
+                    btn.classList.remove("copied");
+                }, 2000);
+            }).catch(function(err) {
+                console.error("Could not copy text: ", err);
+            });
+        }
+    </script>
 
 </body>
 </html>
