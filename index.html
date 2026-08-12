@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -151,54 +152,40 @@
             color: #1e8449;
             font-size: 1.5rem;
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        .amount-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+        .donation-instruction {
+            color: #e67e22;
+            font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 25px;
-        }
-        .amount-buttons a {
-            text-decoration: none;
-        }
-        .amt-btn {
-            padding: 10px 20px;
-            border: 2px solid #27ae60;
-            background: transparent;
-            color: #27ae60;
-            font-weight: bold;
-            border-radius: 6px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .amt-btn.active {
-            background: #f1c40f;
-            border-color: #f1c40f;
-            color: #333;
         }
         .qr-container {
             border: 2px dashed #27ae60;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
             display: inline-block;
             background-color: #f9fdfa;
             margin-bottom: 20px;
         }
         .qr-container p {
-            margin: 0 0 10px 0;
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
             font-weight: bold;
-            color: #333;
+            color: #2c3e50;
         }
         .qr-container img {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
         }
         .upi-id-text {
-            margin-top: 10px;
-            color: #555;
-            font-size: 0.9rem;
+            margin-top: 15px;
+            color: #333;
+            font-size: 1.1rem;
+            background-color: #e8f8f5;
+            padding: 8px 15px;
+            border-radius: 6px;
+            display: inline-block;
         }
 
         .disclaimer {
@@ -210,7 +197,7 @@
             color: #555;
             line-height: 1.6;
             text-align: left;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .contact-section {
@@ -309,24 +296,10 @@
 
         <div class="donation-box">
             <div class="donation-title">Make a Contribution</div>
-
-            <div class="amount-buttons">
-                <!-- 100 Rs Button Link -->
-                <a href="upi://pay?pa=rajsharma8511@axl&pn=Sewa%20Dharm&am=100&cu=INR">
-                    <button class="amt-btn">₹100</button>
-                </a>
-                <!-- 500 Rs Button Link -->
-                <a href="upi://pay?pa=rajsharma8511@axl&pn=Sewa%20Dharm&am=500&cu=INR">
-                    <button class="amt-btn">₹500</button>
-                </a>
-                <!-- 1000 Rs Button Link -->
-                <a href="upi://pay?pa=rajsharma8511@axl&pn=Sewa%20Dharm&am=1000&cu=INR">
-                    <button class="amt-btn active">₹1000</button>
-                </a>
-                <!-- Other Amount Button Link -->
-                <a href="upi://pay?pa=rajsharma8511@axl&pn=Sewa%20Dharm&cu=INR">
-                    <button class="amt-btn">Other Amount</button>
-                </a>
+            
+            <!-- Added a clear instruction for donors -->
+            <div class="donation-instruction">
+                कृपया नीचे दिए गए QR कोड को स्कैन करके या UPI ID द्वारा अपना योगदान दें।
             </div>
 
             <div class="qr-container">
